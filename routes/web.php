@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'AllController@show');
+Route::get('/', 'AllController@show')->name('contact');
 
 
 //  Route USER
@@ -45,6 +45,10 @@ Route::get('/portfolio', 'PortfolioController@show');
 Route::get('/testimonial', 'TestimonialController@show');
 
 Route::get('/team', 'TeamController@show');
+
+    // forum contact
+Route::post('/contact/store', "ContactController@store");
+
 
 
 
