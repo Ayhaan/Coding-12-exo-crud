@@ -12,7 +12,7 @@
       </div>
 
       <div class="row">
-        @foreach ($teams as $team)
+        @foreach ($teams->slice(0,4) as $team)
             <div class="col-md-3">
               <div class="member">
                 <div class="pic"><img src={{$team->img}} alt=""></div>

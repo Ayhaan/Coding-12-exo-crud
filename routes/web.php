@@ -37,16 +37,35 @@ Route::post('/service/{id}/update', 'ServiceController@update');
 Route::get('/service/create', 'ServiceController@create');
 Route::post('/service/store', 'ServiceController@store');
 
+    // portfolio
+Route::get('/portfolio', 'PortfolioController@show')->name('portfolio');
+Route::get('/portfolio/{id}/delete', 'PortfolioController@destroy');
 
+Route::get('/portfolio/{id}/edit', 'PortfolioController@edit');
+Route::post('/portfolio/{id}/update', 'PortfolioController@update');
 
+Route::get('/portfolio/create', 'PortfolioController@create');
+Route::post('/portfolio/store', 'PortfolioController@store');
 
-Route::get('/portfolio', 'PortfolioController@show');
-
+    // testimonial
 Route::get('/testimonial', 'TestimonialController@show');
 
-Route::get('/team', 'TeamController@show');
+
+    // Team
+Route::get('/team', 'TeamController@show')->name('team');
+Route::get('/team/{id}/delete', 'TeamController@destroy');
+
+Route::get('/team/{id}/edit', 'TeamController@edit');
+Route::post('/team/{id}/update', 'TeamController@update');
+
+Route::get('/team/create', 'TeamController@create');
+Route::post('/team/store', 'TeamController@store');
+
 
     // forum contact
+Route::get('/contact', 'ContactController@show');
+Route::get('/contact/{id}/delete', 'ContactController@destroy');
+
 Route::post('/contact/store', "ContactController@store");
 
 

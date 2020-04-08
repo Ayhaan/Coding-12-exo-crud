@@ -19,7 +19,8 @@
             <h2><a href="/portfolio" class="btn">Portfolio</a></h2>
             <h2><a href="/testimonial" class="btn">Testimonials</a></h2>
             <h2><a href="/team" class="btn">Team</a></h2>
-            <h2><a href="/" class="btn ">ReturnBack</a></h2>
+            <h2><a href="/contact" class="btn">Message</a></h2>
+            <h2><a href="/" class="btn btn-primary  ">ReturnWebSite</a></h2>
         </nav>
     
         @yield('content')
