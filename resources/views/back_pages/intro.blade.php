@@ -4,10 +4,12 @@
     <div class="border mt-3 mb-3 container">
         <h2 class="text-center ">Modifer votre image d'intro:</h2>
         <div class="d-flex justify-content-center mb-5">
-            {{-- @if ()
-                
-            @endif --}}
-            <a href="/intro/create" class=" btn btn-success">Create</a>
+
+           @if (isset($intros[0]))
+                <h4 class="font-weight-bold" >Vous pouvez Update une seul fois.  </h4 >
+            @else
+                <a href="/intro/create" class=" btn btn-success">Create</a>
+            @endif
         </div>
 
         @foreach ($intros as $intro)
