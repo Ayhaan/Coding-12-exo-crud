@@ -14,7 +14,7 @@
     </div>
     <div  class="form-group">
         <label  for="">Image url</label>
-        <input  type="text"   class="form-control"  name="style_img"  id=""  aria-describedby="emailHelp"  placeholder="Comment">
+        <input  type="text"   class="form-control"  name="style_img"  id=""  aria-describedby="emailHelp"  placeholder="Image url">
     </div>
     <button  type="submit"  class="btn btn-primary">Upload</button>
 </form>

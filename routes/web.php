@@ -24,8 +24,12 @@ route::get('/user', 'UserController@show');
 // Route CRUD
 
     // about
-Route::get('/intro', 'IntroController@show');
+Route::get('/intro', 'IntroController@show')->name('intro');
 Route::get('/intro/{id}/delete', 'IntroController@destroy');
+
+Route::get('/intro/create', 'IntroController@create');
+Route::post('/intro/store', 'IntroController@store');
+
 
     // service
 Route::get('/service', 'ServiceController@show')->name('service');
@@ -48,7 +52,14 @@ Route::get('/portfolio/create', 'PortfolioController@create');
 Route::post('/portfolio/store', 'PortfolioController@store');
 
     // testimonial
-Route::get('/testimonial', 'TestimonialController@show');
+Route::get('/testimonial', 'TestimonialController@show')->name('testimonial');
+Route::get('/testimonial/{id}/delete', 'TestimonialController@destroy');
+
+Route::get('/testimonial/{id}/edit', 'TestimonialController@edit');
+Route::post('/testimonial/{id}/update', 'TestimonialController@update');
+
+Route::get('/testimonial/create', 'TestimonialController@create');
+Route::post('/testimonial/store', 'TestimonialController@store');
 
 
     // Team

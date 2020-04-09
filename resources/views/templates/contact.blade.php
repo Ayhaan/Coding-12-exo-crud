@@ -36,6 +36,17 @@
           <div class="form">
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
+
+                @if ($errors->any())
+                  <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                  </div>
+               @endif
+
             <form action="/contact/store" method="post" role="form" class="contactForm">
               @csrf
               <div class="form-group">
@@ -56,6 +67,7 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+
           </div>
         </div>
 

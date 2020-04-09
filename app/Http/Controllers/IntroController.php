@@ -18,4 +18,15 @@ class IntroController extends Controller
         Intro::find($id)->delete();
         return redirect()->back();
     }
+
+    // create
+     public function create(){
+        return view('create.intro');
+    }
+    public function store(){
+        $intro = new Intro();
+        $intro -> img_path = request('img_path');
+        $intro->save();
+        return redirect()->route('intro');
+    }
 }

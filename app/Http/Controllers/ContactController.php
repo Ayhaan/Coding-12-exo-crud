@@ -27,6 +27,12 @@ class ContactController extends Controller
         $contact -> email = request('email');
         $contact -> subject = request('subject');
         $contact -> message = request('message');
+        request()->validate([
+            'name'=>['required'],
+            'email'=>['required', 'email'],
+            'message'=>['required'],
+            'subject'=>['required'],
+        ]);
         $contact ->save();
         return Redirect::to(URL::previous() . "#contact");
     }

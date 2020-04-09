@@ -18,7 +18,7 @@ class CreateTestimonialsTable extends Migration
             $table->string('img');
             $table->string('name');
             $table->string('span');
-            $table->string('logoSigne');
+            // $table->string('logoSigne');
             $table->string('comment');
             $table->timestamps();
         });

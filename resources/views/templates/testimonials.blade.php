@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      @foreach ($testimonials as $testimonial)
+      @foreach ($testimonials->slice(0,4) as $testimonial)
         <div class="row">
           <div class="col-md-3">
             <div class="profile">
@@ -22,7 +22,7 @@
           </div>
           <div class="col-md-9">
             <div class="quote">
-              <b><img src={{$testimonial->logoSigne}} alt=""></b>{{$testimonial->comment}} <small><img src="img/quote_sign_right.png" alt=""></small>
+              <b><img src="img/quote_sign_left.png" alt=""></b>{{$testimonial->comment}} <small><img src="img/quote_sign_right.png" alt=""></small>
             </div>
           </div>
         </div> 
