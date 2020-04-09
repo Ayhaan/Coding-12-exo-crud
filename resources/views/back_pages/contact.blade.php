@@ -30,7 +30,7 @@
 <div class="container">
     <div class="row">
         <div class="col-2 mt-2">
-            ({{$contact->name}})
+            {{$contact->name}}
         </div>
         <div class="col-2 mt-2">
             {{$contact->email}}
