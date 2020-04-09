@@ -9,6 +9,7 @@ class TestimonialController extends Controller
 {
     public function show(){
         $testimonials = Testimonial::all();
+        // $testimonials= Testimonial::take(4)->get();
         return view('back_pages.testimonial', compact('testimonials'));
     }
         // delete

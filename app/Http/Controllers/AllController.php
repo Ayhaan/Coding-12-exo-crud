@@ -15,7 +15,8 @@ class AllController extends Controller
     public function show(){
         $intros = Intro::first();
         $portfolios = Portfolio::all();
-        $testimonials = Testimonial::all();
+        // $testimonials = Testimonial::all();
+        $testimonials= Testimonial::take(4)->get();
         $teams = Team::all();
         $services = Service::all();
         return view('index', compact('intros', 'portfolios', 'testimonials', 'teams', 'services')); 

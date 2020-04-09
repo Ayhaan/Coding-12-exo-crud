@@ -9,7 +9,7 @@
     <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="preloader"></div>
+    {{-- <div id="preloader"></div> --}}
 
     <div class="container p-5">
         <h1>Back Office:</h1>

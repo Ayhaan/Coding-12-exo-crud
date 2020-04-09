@@ -11,22 +11,47 @@
         </div>
       </div>
 
-      @foreach ($testimonials->slice(0,4) as $testimonial)
-        <div class="row">
-          <div class="col-md-3">
-            <div class="profile">
-              <div class="pic"><img src={{$testimonial->img}} alt=""></div>
-              <h4>{{$testimonial->name}}</h4>
-              <span>{{$testimonial->span}}</span>
+      @for ($i = 0; $i < count($testimonials) ; $i++)
+
+          @if ($i  % 2)
+
+            <div class="row">
+              <div class="col-md-3">
+                <div class="profile">
+                  <div class="pic"><img src={{$testimonials[$i]->img}} alt=""></div>
+                  <h4>{{$testimonials[$i]->name}}</h4>
+                  <span>{{$testimonials[$i]->span}}</span>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="quote">
+                  <b><img src="img/quote_sign_left.png" alt=""></b>{{$testimonials[$i]->comment}}<small><img src="img/quote_sign_right.png" alt=""></small>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-md-9">
-            <div class="quote">
-              <b><img src="img/quote_sign_left.png" alt=""></b>{{$testimonial->comment}} <small><img src="img/quote_sign_right.png" alt=""></small>
+
+          @else
+
+            <div class="row">
+            <div class="col-md-9">
+              <div class="quote">
+                <b><img src="img/quote_sign_left.png"  alt=""></b>{{$testimonials[$i]->comment}}<small><img src="img/quote_sign_right.png" alt=""></small>
+              </div>
             </div>
-          </div>
-        </div> 
-      @endforeach
+            <div class="col-md-3">
+              <div class="profile">
+                <div class="pic"><img src={{$testimonials[$i]->img}} alt=""></div>
+                    <h4>{{$testimonials[$i]->name}}</h4>
+                   <span>{{$testimonials[$i]->span}}</span>
+                </div>  
+              </div>
+            </div>
+
+          @endif
+
+       @endfor
+ 
+     
 
       {{-- <div class="row">
         <div class="col-md-9">
